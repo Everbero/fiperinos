@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2>Pesquisa de Veículos</h2>
+    <form (ngSubmit)="pesquisar()">
+      <div class="form-group">
+        <label for="marca">Marca:</label>
+        <input type="text" class="form-control" id="marca" name="marca" [(ngModel)]="marca">
+      </div>
+      <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <input type="text" class="form-control" id="modelo" name="modelo" [(ngModel)]="modelo">
+      </div>
+      <div class="form-group">
+        <label for="ano">Ano:</label>
+        <input type="number" class="form-control" id="ano" name="ano" [(ngModel)]="ano">
+      </div>
+      <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
+  </div>
