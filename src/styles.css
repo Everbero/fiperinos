@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* Exemplo de referência aos arquivos de fonte do Font Awesome */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("./assets/webfonts/fa-solid-900.woff2") format("woff2");
+  /* O caminho para os arquivos de fonte do Font Awesome pode variar dependendo da estrutura do seu projeto */
+}
+
+@import "~swiper/swiper-bundle.css";

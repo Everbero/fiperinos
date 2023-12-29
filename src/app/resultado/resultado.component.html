@@ -1,0 +1,70 @@
+<!-- titulo da página com nome do carro -->
+<h1 class="text-center">{{valorVeiculo.Marca}} - {{ valorVeiculo.Modelo }}</h1>
+<div class="container-fluid">
+  <div class="row vehicle-bing">
+    <div *ngIf="images.length > 0" class="container">
+      <ng-image-slider [images]="images" #nav></ng-image-slider>
+    </div>
+  </div>
+  <div class="row vehicle-info">
+    <!-- Coluna para exibir o resultado -->
+    <div class="col-md-3">
+      <!-- Conteúdo do resultado -->
+      <!-- Exibir os detalhes do veículo, como você mencionou anteriormente -->
+      <div *ngIf="valorVeiculo" class="card">
+        <div class="card-header">Informações do Veículo</div>
+        <div class="card-body">
+          <div class="info-item">
+            <i class="fas fa-car"></i> <strong>Tipo de Veículo:</strong>
+            {{ nomeTipoVeiculo || "Desconhecido" }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-dollar-sign"></i> <strong>Valor:</strong>
+            {{ valorVeiculo.Valor }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-industry"></i> <strong>Marca:</strong>
+            {{ valorVeiculo.Marca }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-car"></i> <strong>Modelo:</strong>
+            {{ valorVeiculo.Modelo }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar-alt"></i> <strong>Ano:</strong>
+            {{ valorVeiculo.AnoModelo }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-gas-pump"></i> <strong>Combustível:</strong>
+            {{ valorVeiculo.Combustivel }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-barcode"></i> <strong>Código FIPE:</strong>
+            {{ valorVeiculo.CodigoFipe }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar"></i> <strong>Mês de Referência:</strong>
+            {{ valorVeiculo.MesReferencia }}
+          </div>
+          <div class="info-item">
+            <i class="fas fa-burn"></i> <strong>Sigla Combustível:</strong>
+            {{ valorVeiculo.SiglaCombustivel }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna para exibir o gráfico -->
+    <div class="col-md-9 graph">
+      <!-- Conteúdo do gráfico -->
+      <canvas #grafico width="100%" height="100%"></canvas>
+    </div>
+  </div>
+</div>
+<!-- botao nova pesquisa -->
+<div class="container-fluid">
+  <div class="row m-4 text-center">
+    <div class="col-md-12">
+      <button class="btn btn-primary" routerLink="/pesquisa">Nova Pesquisa</button>
+    </div>
+  </div>

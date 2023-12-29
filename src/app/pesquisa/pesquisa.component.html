@@ -1,18 +1,88 @@
 <div class="container mt-5">
-    <h2>Pesquisa de Veículos</h2>
-    <form (ngSubmit)="pesquisar()">
-      <div class="form-group">
-        <label for="marca">Marca:</label>
-        <input type="text" class="form-control" id="marca" name="marca" [(ngModel)]="marca">
-      </div>
-      <div class="form-group">
-        <label for="modelo">Modelo:</label>
-        <input type="text" class="form-control" id="modelo" name="modelo" [(ngModel)]="modelo">
-      </div>
-      <div class="form-group">
-        <label for="ano">Ano:</label>
-        <input type="number" class="form-control" id="ano" name="ano" [(ngModel)]="ano">
-      </div>
-      <button type="submit" class="btn btn-primary">Pesquisar</button>
-    </form>
+  <div class="card">
+    <h2 class="card-header">Pesquisa de Veículos</h2>
+    <div class="card-body">
+      <p>
+        Pesquise o valor de um veículo na tabela FIPE. Para isso, selecione o tipo
+        de veículo, a marca, o modelo e o ano.
+      </p>
+      <form>
+        <div class="form-group">
+          <label for="tipoVeiculo">Tipo de Veículo:</label><br />
+          <input
+            type="radio"
+            name="tipoVeiculo"
+            id="carros"
+            value="carros"
+            [(ngModel)]="tipoVeiculo"
+            (change)="onChangeTipoVeiculo()"
+          />
+          <label for="carros">Carros</label><br />
+          <input
+            type="radio"
+            name="tipoVeiculo"
+            id="motos"
+            value="motos"
+            [(ngModel)]="tipoVeiculo"
+            (change)="onChangeTipoVeiculo()"
+          />
+          <label for="motos">Motos</label><br />
+          <input
+            type="radio"
+            name="tipoVeiculo"
+            id="caminhoes"
+            value="caminhoes"
+            [(ngModel)]="tipoVeiculo"
+            (change)="onChangeTipoVeiculo()"
+          />
+          <label for="caminhoes">Caminhões</label>
+        </div>
+        <div class="form-group">
+          <label for="marca">Marca:</label>
+          <select
+            class="form-control"
+            id="marca"
+            name="marca"
+            [(ngModel)]="marcaId"
+            (change)="carregarModelos()"
+          >
+            <option value="0" disabled>Selecione uma marca</option>
+            <option *ngFor="let marca of marcas" [value]="marca.codigo">
+              {{ marca.nome }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modelo">Modelo:</label>
+          <select
+            class="form-control"
+            id="modelo"
+            name="modelo"
+            [(ngModel)]="modeloId"
+            (change)="carregarAnos()"
+          >
+            <option value="0" disabled>Selecione um modelo</option>
+            <option *ngFor="let modelo of modelos" [value]="modelo.codigo">
+              {{ modelo.nome }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ano">Ano:</label>
+          <select
+            class="form-control"
+            id="modelo"
+            name="modelo"
+            [(ngModel)]="anoId"
+            (change)="carregarValorVeiculo()"
+          >
+            <option value="0" disabled>Selecione o ano</option>
+            <option *ngFor="let ano of anos" [value]="ano.codigo">
+              {{ ano.nome }}
+            </option>
+          </select>
+        </div>
+      </form>
+    </div>
   </div>
+</div>

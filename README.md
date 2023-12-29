@@ -1,27 +1,42 @@
-# Fiperinos
+# Projeto de Front-end - IFRN Campus Parnamirim
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+[![IFRN](https://img.shields.io/badge/IFRN-Front--end--2023.2-brightgreen)](https://ifrn.edu.br/parnamirim)
+[![GitHub](https://img.shields.io/badge/GitHub-Everbero-blue)](https://github.com/Everbero)
 
-## Development server
+## Descrição
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este é um projeto desenvolvido como parte do curso de Desenvolvimento Front-end do IFRN Campus Parnamirim, edição 2023.2. O objetivo é criar uma aplicação web que utiliza APIs externas para exibir informações sobre veículos, incluindo gráficos de evolução de preços ao longo dos anos e imagens do veículo.
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Consulta de informações de veículos utilizando a API da Tabela FIPE.
+- Apresentação de gráficos de evolução de preços por ano.
+- Busca de imagens relacionadas aos veículos usando a API de Busca de Imagens da Microsoft Bing.
+- Exibição de informações em cards utilizando Bootstrap.
 
-## Build
+## Recursos Utilizados
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Bing Image Search API:** Integração para busca de imagens de veículos.
+- **Tabela FIPE:** Consulta de informações e evolução de preços de veículos.
+- **Chart.js:** Biblioteca para renderização de gráficos de evolução de preços.
+- **Angular Font Awesome:** Utilizado para incluir ícones Font Awesome no projeto.
+- **Bootstrap:** Framework de design para a criação de layouts e componentes.
 
-## Running unit tests
+## Como Usar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone este repositório.
+2. Instale as dependências usando `npm install`.
+3. Inicie o servidor local com `ng serve`.
+4. Acesse a aplicação em `http://localhost:4200`.
 
-## Running end-to-end tests
+## Contribuições
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue para sugestões ou criar um pull request com melhorias.
 
-## Further help
+## Autor
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto foi desenvolvido por [Douglas de Araújo](https://github.com/Everbero).
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.
