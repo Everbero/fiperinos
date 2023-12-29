@@ -183,7 +183,6 @@ export class ResultadoComponent implements OnInit {
       });
     }
   }
-
   // imagens dos veiculos
   searchImages(query: string): void {
     this.bingImageSearchService.searchImages(query).subscribe(

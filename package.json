@@ -1,14 +1,14 @@
 {
   "name": "fiperinos",
   "version": "1.0.0",
-  "homepage": "https://everber.github.io/fiperinos/",
+  "homepage": "https://everbero.github.io/fiperinos/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --base-href=https://everbero.github.io/fiperinos/ && npx gh-pages -d dist",
+    "deploy": "ng build --configuration=production --base-href=https://everbero.github.io/fiperinos/ && npx gh-pages -d dist",
     "postdeploy": "echo 'Deployment completed!'"
   },
   "private": true,
