@@ -89,7 +89,7 @@ export class ResultadoComponent implements OnInit {
         }
       );
 
-      this.searchImages(this.valorVeiculo.Modelo);
+      this.searchImages(`${this.valorVeiculo.tipoVeiculo} ${this.valorVeiculo.marcaId} ${this.valorVeiculo.Modelo}`);
     }
   }
   ngAfterViewInit(): void {
