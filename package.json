@@ -8,7 +8,7 @@
     "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration=production --base-href=/fiperinos/ && npx gh-pages -d dist",
+    "deploy": "ng deploy --base-href=/fiperinos/",
     "postdeploy": "echo 'Deployment completed!'"
   },
   "private": true,
